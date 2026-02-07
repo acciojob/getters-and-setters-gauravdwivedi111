@@ -1,25 +1,22 @@
 class Person {
-  #name;
-  #age;
-
   constructor(name, age) {
-    this.#name = name;
-    this.#age = age;
+    this._name = name;
+    this._age = age;
   }
 
   // Getter for name
   get name() {
-    return this.#name;
+    return this._name;
   }
 
   // Getter for age
   get age() {
-    return this.#age;
+    return this._age;
   }
 
   // Setter for age
   set age(year) {
-    if (year > 0) this.#age = year;
+    if (year > 0) this._age = year;
     else console.log("Invalid age");
   }
 }
@@ -48,7 +45,7 @@ obj2.study();           // Alice is studying
 let obj3 = new Teacher("Bob", 40);
 obj3.teach();           // Bob is teaching
 
-// Do not change the code below this line
+// Cypress compatibility
 window.Person = Person;
 window.Student = Student;
 window.Teacher = Teacher;
